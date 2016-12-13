@@ -38,7 +38,7 @@ class App extends Component {
         <div className='keyboard'>
           {/* TODO */}
           <LetterButton
-            value='A'
+            value={ALPHABET[0]}
             onChoose={() => this.choose('A')}
             disabled={false} />
         </div>

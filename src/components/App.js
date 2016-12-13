@@ -30,17 +30,20 @@ class App extends Component {
   }
 
   render () {
+    const letter = ALPHABET.map((letters) => {
+      return <LetterButton
+        value={letters}
+        onChoose={() => this.choose(letters)}
+        disabled={false} />
+    })
+
     return <div className='app'>
       <main>
         <Snowman step={this.points} size={400} />
         {/* TODO */}
         <Word value='SNOWMAN' guesses={['E', 'M', 'O']} />
         <div className='keyboard'>
-          {/* TODO */}
-          <LetterButton
-            value={ALPHABET[0]}
-            onChoose={() => this.choose('A')}
-            disabled={false} />
+          {letter}
         </div>
       </main>
       <footer>It's like hangman, but, um... backwards or something.</footer>

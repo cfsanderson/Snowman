@@ -3,11 +3,10 @@ import _ from 'lodash'
 import LetterButton from './LetterButton'
 import Snowman from './Snowman'
 import Word from './Word'
+import Footer from './Footer'
 
-// ALPHABET is an array of 26 letters, 'a' through 'z', i.e. ['a', 'b', 'c', ...'z']
 const ALPHABET = _.range(26).map(i => String.fromCharCode(i + 97))
 
-// WORDS is an array of 1024 different seven letter words
 const WORDS = require('raw!../wordList2.txt').trim().split('\n')
 
 class App extends Component {
@@ -16,7 +15,6 @@ class App extends Component {
     super()
     this.state = {
       word: _.sample(WORDS),
-      // word: 'snowman',
       guesses: []
     }
   }
@@ -46,6 +44,10 @@ class App extends Component {
 
     return <div className='app'>
       <main>
+        <header className='header'>
+          <h1>Snowman!</h1>
+        </header>
+        <h2>It's like hangman, but, um... backwards or something.</h2>
         <Snowman step={this.points} size={400} />
         {/* TODO */}
         <Word value={this.state.word} guesses={this.state.guesses} />
@@ -53,7 +55,7 @@ class App extends Component {
           {letters}
         </div>
       </main>
-      <footer>It's like hangman, but, um... backwards or something.</footer>
+      <Footer />
     </div>
   }
 }

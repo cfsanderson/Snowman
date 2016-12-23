@@ -5,3 +5,9 @@ cookies
 sweater
 slipper
 parents
+weather
+subzero
+skating
+glacier
+climate
+coldest

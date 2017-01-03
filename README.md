@@ -1,6 +1,5 @@
 # Snowman App
 
-![](./src/images/snowman-screenshot.png)
 ![](./src/images/snowman-example-3.gif)
 
 It's like hangman, but in reverse!

@@ -1,7 +1,7 @@
 # Snowman App
 
-![](/images/snowman-screenshot.png)
-![](/images/snowman-example-3.gif)
+![](./src/images/snowman-screenshot.png)
+![](./images/snowman-example-3.gif)
 
 It's like hangman, but in reverse!
 

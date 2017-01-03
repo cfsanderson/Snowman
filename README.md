@@ -1,4 +1,4 @@
-# Snowman App
+# Snowman
 
 ![](./src/images/snowman-example-3.gif)
 
